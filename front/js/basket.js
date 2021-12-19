@@ -1,4 +1,4 @@
-/*On rappelle ce qu'il y a dans le local storage => cad tout ce qu'il y a dans le panier */
+/*Récupération du panier */
 let productsInLocalStorage = JSON.parse(localStorage.getItem("products"));
 console.log(productsInLocalStorage);
 const cartContent = document.getElementById("cart__items");
@@ -36,7 +36,7 @@ function affichProduct() {
 }
 affichProduct();
 
-/* suppression d'un article */
+/* Suppression d'un article */
 function suppressionProduct() {
   for (let i = 0; i < productsInLocalStorage.length; i++) {
     let btnDelete = document.getElementsByClassName("deleteItem")[i];
