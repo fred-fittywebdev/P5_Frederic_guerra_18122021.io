@@ -9,18 +9,18 @@ const itemColors = document.getElementById("colors");
 let product;
 
 //Appel API pour afficher uniquement le produit correspondant à la variable canapeID
-showProductsInProduct()
+showKanap()
 
-function showProductsInProduct() {
+function showKanap() {
   fetch(`http://localhost:3000/api/products/${canapeId}`)
     .then((reponse) => reponse.json())
     .then((content) => {
-      showProductDetail(content)
+      showKanapDetail(content)
     })
     .catch((error) => console.error(error));
 }
 
-function showProductDetail(content){
+function showKanapDetail(content){
   product = content;
   let name = content.name;
   let description = content.description;
