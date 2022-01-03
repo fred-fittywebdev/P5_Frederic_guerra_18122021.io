@@ -2,9 +2,7 @@
 const urlConfirmation = new URL(window.location.href);
 //Fonction pour récupérer l'orderId de l'url
 const getId = () => {
-  console.log(urlConfirmation);
   const getConfirmationId = urlConfirmation.searchParams.get("name");
-  console.log(getConfirmationId);
   document.getElementById("orderId").innerHTML = getConfirmationId;
 };
 getId();

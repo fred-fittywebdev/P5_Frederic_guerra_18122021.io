@@ -2,13 +2,12 @@ const url = "http://localhost:3000/api/products"
 const itemsList = document.getElementById('items')
 
 //Fonction appel API pour afficher tous les produits dans la page d'accueil
-showProductsInIndex()
+showProducts()
 
-function showProductsInIndex(){
+function showProducts(){
   fetch(url)
     .then((reponse) => reponse.json())
     .then((data) => {
-      console.log(data)
       showAllProduct(data)
     })
     .catch((error) => {
@@ -19,7 +18,6 @@ function showProductsInIndex(){
 
 function showAllProduct(data){
   for (product of data) {
-    console.log(product);
     itemsList.innerHTML += `
               <a href="./product.html?id=${product._id}">
                   <article>

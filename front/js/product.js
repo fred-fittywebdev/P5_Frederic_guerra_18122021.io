@@ -67,7 +67,7 @@ function addBasket() {
     // On utilise le spread opérateur pour ajouter la quantité choisie aux informations du produit déjà collectées
     const selectedProduct = {...product, quantity: parseInt(quantityProducts.value)};
 
-    // On vérmet le produit dans le localstorage
+    // On met le produit dans le localstorage
     let productsInLocalStorage = JSON.parse(localStorage.getItem("products")) || [];
     
 
